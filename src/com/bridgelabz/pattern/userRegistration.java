@@ -54,7 +54,17 @@ public class userRegistration {
 		   else 
 			   System.out.println("Invalid phone number");
 	}
-		
+	public void check_Password() {
+		System.out.println("Enter Password");  
+		   String value = sc.nextLine();
+		   String pattern = "^.{8,}$";
+		   Pattern r = Pattern.compile(pattern);
+		   Matcher m = r.matcher(value);
+		   if (m.find())
+			   	System.out.println("Valid Password");
+		   else 
+			   System.out.println("Invalid Password");
+	}	
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to User Registration System ");
@@ -63,6 +73,7 @@ public class userRegistration {
 	    obj.check_lastName();
 	    obj.check_email();
 	    obj.check_phone();
+	    obj.check_Password();
 	}
 	
 	
