@@ -57,7 +57,7 @@ public class userRegistration {
 	public void check_Password() {
 		System.out.println("Enter Password");  
 		   String value = sc.nextLine();
-		   String pattern = "^(?=.*[A-Z]).{8,}";
+		   String pattern = "^(?=.*[0-9])(?=.*[A-Z]).{8,}";
 		   Pattern r = Pattern.compile(pattern);
 		   Matcher m = r.matcher(value);
 		   if (m.find())
