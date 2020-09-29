@@ -43,6 +43,17 @@ public class userRegistration {
 		   else 
 			   System.out.println("Invalid email");
 	}
+	public void check_phone() {
+		System.out.println("Enter phone number ");  
+		   String value = sc.nextLine();
+		   String pattern = "^[0-9]{1,3}[ ][0-9]{10}?$";
+		   Pattern r = Pattern.compile(pattern);
+		   Matcher m = r.matcher(value);
+		   if (m.find())
+			   	System.out.println("Valid phone number");
+		   else 
+			   System.out.println("Invalid phone number");
+	}
 		
 
 	public static void main(String[] args) {
@@ -51,6 +62,8 @@ public class userRegistration {
 	    obj.check_firstName();
 	    obj.check_lastName();
 	    obj.check_email();
-	    }
+	    obj.check_phone();
+	}
+	
 	
 }
